@@ -21,7 +21,7 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no -i jump.pem ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
             cd ./simple-node-app
-            git pull origin main
+            git pull origin master
             npm install
             # Use zero-downtime reload if app already exists
             pm2 describe app > /dev/null 2>&1
