@@ -20,7 +20,7 @@ jobs:
       - name: Deploy over SSH with PM2 zero-downtime
         run: |
           ssh -o StrictHostKeyChecking=no -i pvt.pem ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
-            cd ./simple-node-app
+            cd ./gitlab
             git pull origin master
             npm install
             # Use zero-downtime reload if app already exists
