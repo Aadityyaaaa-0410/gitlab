@@ -7,15 +7,15 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
       - name: Decode private key
         run: |
-          echo "${{ secrets.EC2_KEY }}" > jump.pem
-          chmod 600 jump.pem
+          echo "${{ secrets.EC2_KEY }}" > pvt.pem
+          chmod 600 pvt.pem
 
       - name: Deploy over SSH with PM2 zero-downtime
         run: |
